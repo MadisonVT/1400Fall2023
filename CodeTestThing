@@ -6,8 +6,10 @@ namespace PoopdyScoop
   {
     static void Main(string[] args)
     {
-      string myMessage = "Hello World! :D";
-      Console.WriteLine(myMessage);
+      string myMessage = "Hello World";
+      string cooleoAdds = "! :D";
+      string addeoYay = myMessage + cooleoAdds;
+      Console.WriteLine(addeoYay);
     }
   }
 }
