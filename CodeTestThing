@@ -1,0 +1,13 @@
+using System;
+
+namespace PoopdyScoop
+{
+  class Yayo
+  {
+    static void Main(string[] args)
+    {
+      string myMessage = "Hello World! :D";
+      Console.WriteLine(myMessage);
+    }
+  }
+}
