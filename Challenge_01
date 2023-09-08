@@ -1,16 +1,14 @@
-using System;
-
 namespace ComplimentBot
 {
-    class Bot
+    public class Bot
     {
-        static void Main()
+        public static void Main()
         {
             string usersName;
             Console.WriteLine("Hello Friend!");
             Console.WriteLine("What is your name?");
             usersName = Console.ReadLine();
-            Console.WriteLine("Welcome," + usersName + " You are awesome!");
+            Console.WriteLine("Welcome," + " " + usersName + "! You are awesome! :D");
         }
     }
 }
