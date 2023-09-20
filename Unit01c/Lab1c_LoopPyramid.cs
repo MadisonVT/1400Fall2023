@@ -13,6 +13,10 @@ namespace Program
                 int[] num_rows = { startnum };
                 Console.WriteLine(startnum);
                 startnum++;
+                for (int i = 0; i < startnum.Length; i++)
+                {
+                    Console.WriteLine(startnum[i]);
+                }
             }
 
         }
