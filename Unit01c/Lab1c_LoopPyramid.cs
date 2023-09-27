@@ -5,20 +5,17 @@ namespace Program
     {
         public static void Main()
         {
-            Console.WriteLine("Choose the amount of rows you want your number pyramid to have!");
-            int rows = Convert.ToInt32(Console.ReadLine());
-            int startnum = 1;
-            while (rows >= startnum)
-            {
-                int[] num_rows = { startnum };
-                Console.WriteLine(startnum);
-                startnum++;
-                for (int i = 0; i < num_rows.Length;)
-                {
-                    Console.WriteLine(num_rows[i]);
-                    i++;
-                }
+            Console.WriteLine("How many rows do you want your pyramid to have?");
+            int num_rows = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(num_rows + " rows selected.");
 
+            for (int i = 1; i <= num_rows; i++)
+            {
+                for (int j = 1; j <= i; j++)
+                {
+                    Console.WriteLine(i);
+                }
+                Console.WriteLine();
             }
 
         }
