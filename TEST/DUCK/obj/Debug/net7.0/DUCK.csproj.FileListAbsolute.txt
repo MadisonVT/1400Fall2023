@@ -1,0 +1,14 @@
+c:\Users\madis\OneDrive\Documents\1400Fall2023\TEST\DUCK\bin\Debug\net7.0\DUCK.exe
+c:\Users\madis\OneDrive\Documents\1400Fall2023\TEST\DUCK\bin\Debug\net7.0\DUCK.deps.json
+c:\Users\madis\OneDrive\Documents\1400Fall2023\TEST\DUCK\bin\Debug\net7.0\DUCK.runtimeconfig.json
+c:\Users\madis\OneDrive\Documents\1400Fall2023\TEST\DUCK\bin\Debug\net7.0\DUCK.dll
+c:\Users\madis\OneDrive\Documents\1400Fall2023\TEST\DUCK\bin\Debug\net7.0\DUCK.pdb
+c:\Users\madis\OneDrive\Documents\1400Fall2023\TEST\DUCK\obj\Debug\net7.0\DUCK.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\madis\OneDrive\Documents\1400Fall2023\TEST\DUCK\obj\Debug\net7.0\DUCK.AssemblyInfoInputs.cache
+c:\Users\madis\OneDrive\Documents\1400Fall2023\TEST\DUCK\obj\Debug\net7.0\DUCK.AssemblyInfo.cs
+c:\Users\madis\OneDrive\Documents\1400Fall2023\TEST\DUCK\obj\Debug\net7.0\DUCK.csproj.CoreCompileInputs.cache
+c:\Users\madis\OneDrive\Documents\1400Fall2023\TEST\DUCK\obj\Debug\net7.0\DUCK.dll
+c:\Users\madis\OneDrive\Documents\1400Fall2023\TEST\DUCK\obj\Debug\net7.0\refint\DUCK.dll
+c:\Users\madis\OneDrive\Documents\1400Fall2023\TEST\DUCK\obj\Debug\net7.0\DUCK.pdb
+c:\Users\madis\OneDrive\Documents\1400Fall2023\TEST\DUCK\obj\Debug\net7.0\DUCK.genruntimeconfig.cache
+c:\Users\madis\OneDrive\Documents\1400Fall2023\TEST\DUCK\obj\Debug\net7.0\ref\DUCK.dll
