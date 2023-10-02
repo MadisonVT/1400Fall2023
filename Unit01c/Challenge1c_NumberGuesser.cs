@@ -7,20 +7,29 @@ namespace Program
         {
             int random_number = new Random().Next(1, 10);
             Console.WriteLine("I'm thinking of a number between 1 and 10. Can you guess what it is?");
-            int user_number = Convert.ToInt32(ReadLine());
-            if user_number == random_number
+            int user_number = Convert.ToInt32(Console.ReadLine());
+            while (user_number != random_number)
             {
-                Console.WriteLine("That is correct! It was " + random_number + "!");
+                if (user_number > random_number)
+                {
+                    Console.WriteLine("It's lower than that.");
+                }
+                else if (user_number < random_number)
+                {
+                    Console.WriteLine("It's higher than that.");
+                }
+                else
+                {
+                    Console.WriteLine("Invalid input. Pick a number between 1 and 10.");
+                }
+                Console.WriteLine("Guess again!");
+                user_number = Convert.ToInt32(Console.ReadLine());
             }
-            else if user_number < random_number
+            if (user_number == random_number)
             {
-                Console.WriteLine("It's higher than that.");
+                Console.WriteLine("Correct! The number was " + random_number + "!");
+            }
 
-            }
-            else
-            {
-                Console.WriteLine("It's lower than that.");
-            }
         }
     }
 }
