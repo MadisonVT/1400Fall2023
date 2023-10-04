@@ -6,12 +6,16 @@ namespace Program
         public static void Main()
         {
             Console.WriteLine("Tell me your 3 favorite foods!");
-            string[] foods = { };
-            int numFoods = foods.Count();
+            string[] foods = new string[3];
 
-            while (numFoods == 0)
+            for (int i = 0; i < foods.Length; i++)
             {
-
+                Console.WriteLine("Type one of your favorite foods!");
+                foods[i] = Console.ReadLine();
+            }
+            foreach (string f in foods)
+            {
+                Console.WriteLine(f + " sounds really yummy!");
             }
 
         }
