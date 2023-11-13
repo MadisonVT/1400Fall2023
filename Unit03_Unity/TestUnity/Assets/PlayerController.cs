@@ -7,12 +7,12 @@ public class PlayerController : MonoBehaviour {
     [SerializeField] private float jumpForce = 5f;
     [SerializeField] private float gravity = 9.81f;
 
-    private CharacterController controller;
+    private CharacterController characterController;
     private Vector3 moveDirection;
     private bool isJumping;
     // Use this for initialization
     void Start () {
-    controller = GetComponent<CharacterController>();
+    characterController = GetComponent<CharacterController>();
     }
     
     // Update is called once per frame
@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour {
         var moveDirection = new Vector3(horizonInput, verticalInput) * moveSpeed;
         if (Input.GetKeyDown(KeyCode.W))
         {
-            controller.Move(moveDirection * Time.deltaTime);
+            characterController.Move(moveDirection * Time.deltaTime);
         }
     }
 }
