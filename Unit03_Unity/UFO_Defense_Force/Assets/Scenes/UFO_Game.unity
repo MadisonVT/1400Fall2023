@@ -415,6 +415,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &993553379
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 993553380}
+  m_Layer: 0
+  m_Name: Blaster
+  m_TagString: Untagged
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &993553380
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 993553379}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.924}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1751998286}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1050369330
 GameObject:
   m_ObjectHideFlags: 0
@@ -514,7 +545,7 @@ Transform:
   m_GameObject: {fileID: 1050369330}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.23, z: 3.08}
+  m_LocalPosition: {x: 0, y: 0, z: 6.87}
   m_LocalScale: {x: 2.8171525, y: 0.8208432, z: 2.8171525}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -620,10 +651,11 @@ Transform:
   m_GameObject: {fileID: 1751998282}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.612, z: -5.5}
-  m_LocalScale: {x: 1.3, y: -0.6, z: 2}
+  m_LocalPosition: {x: 0, y: 0.612, z: -11.08}
+  m_LocalScale: {x: 0.96677095, y: -0.446202, z: 1.48734}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 993553380}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1751998287
@@ -641,6 +673,8 @@ MonoBehaviour:
   horizontalInput: 0
   speed: 25
   xRange: 23
+  blaster: {fileID: 993553380}
+  lazerBeam: {fileID: 517198097179395274, guid: 2f54c1dab63eabc4abb34f816dd905b8, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

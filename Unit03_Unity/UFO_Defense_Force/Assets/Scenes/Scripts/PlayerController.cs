@@ -9,6 +9,11 @@ public class PlayerController : MonoBehaviour
     public float speed = 25;
 
     public float xRange = 23;
+
+    public Transform blaster;
+
+    public GameObject lazerBeam;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +38,12 @@ public class PlayerController : MonoBehaviour
         if (transform.position.x > xRange)
         {
             transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
+        }
+        //If spacebar is pressed, fire lazerbeam.
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            //Creates a lazerBeam at the blaster position while maintaining it's rotation.
+            Instantiate(lazerBeam, blaster.transform.position, lazerBeam.transform.rotation);
         }
     }
 }
