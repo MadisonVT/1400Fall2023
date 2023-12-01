@@ -149,7 +149,11 @@ Transform:
   m_GameObject: {fileID: 412839892}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: -0.19, y: 0, z: 1.37}
+=======
+  m_LocalPosition: {x: -0.19, y: 1.2839191, z: 1.37}
+>>>>>>> 01a4ed98a227bdfc62ad2c8f8f90e77705229436
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -486,7 +490,11 @@ Transform:
   m_GameObject: {fileID: 993553379}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: 0, y: 0, z: -1.92}
+=======
+  m_LocalPosition: {x: 0, y: 0, z: 1.12}
+>>>>>>> 01a4ed98a227bdfc62ad2c8f8f90e77705229436
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -698,7 +706,11 @@ Transform:
   m_GameObject: {fileID: 1751998282}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: 0, y: 0.03, z: -3.3}
+=======
+  m_LocalPosition: {x: 0, y: 1.283919, z: -7.16}
+>>>>>>> 01a4ed98a227bdfc62ad2c8f8f90e77705229436
   m_LocalScale: {x: 0.95567244, y: 0.37254, z: 1.48734}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -722,7 +734,11 @@ MonoBehaviour:
   xRange: 23
   blaster: {fileID: 993553380}
   lazerBeam: {fileID: 517198097179395274, guid: 2f54c1dab63eabc4abb34f816dd905b8, type: 3}
+<<<<<<< HEAD
   inventory: 
+=======
+  pickUp: {fileID: 5880613192889616140, guid: 479b49dd4fb4fd04c9b1a5e334115dfb, type: 3}
+>>>>>>> 01a4ed98a227bdfc62ad2c8f8f90e77705229436
 --- !u!54 &1751998288
 Rigidbody:
   m_ObjectHideFlags: 0

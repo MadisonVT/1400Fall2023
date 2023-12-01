@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour
     public string inventory;
     
     
+    public GameObject pickUp;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -60,4 +62,8 @@ public class PlayerController : MonoBehaviour
         
     }
     
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 01a4ed98a227bdfc62ad2c8f8f90e77705229436
 }

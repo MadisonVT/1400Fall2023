@@ -13,8 +13,12 @@ GameObject:
   - component: {fileID: 6838861347871518876}
   - component: {fileID: 2965989095092501949}
   - component: {fileID: 329505610918184019}
+<<<<<<< HEAD
   - component: {fileID: 928603329381871624}
   - component: {fileID: 1520109462031813775}
+=======
+  - component: {fileID: 4685946091624754545}
+>>>>>>> 01a4ed98a227bdfc62ad2c8f8f90e77705229436
   m_Layer: 0
   m_Name: PickUp
   m_TagString: Untagged
@@ -31,7 +35,11 @@ Transform:
   m_GameObject: {fileID: 5880613192889616140}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: 0, y: 0, z: 0}
+=======
+  m_LocalPosition: {x: 0, y: 1.283919, z: 0}
+>>>>>>> 01a4ed98a227bdfc62ad2c8f8f90e77705229436
   m_LocalScale: {x: 0.54922, y: 0.54922, z: 0.54922}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -121,6 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+<<<<<<< HEAD
 --- !u!54 &928603329381871624
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -149,6 +158,10 @@ Rigidbody:
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &1520109462031813775
+=======
+  Player: {fileID: 0}
+--- !u!114 &4685946091624754545
+>>>>>>> 01a4ed98a227bdfc62ad2c8f8f90e77705229436
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -160,5 +173,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55961aeabe76b784bbf638e471add251, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   topBounds: 15
+=======
+  topBounds: 30
+>>>>>>> 01a4ed98a227bdfc62ad2c8f8f90e77705229436
   lowerBounds: -10
