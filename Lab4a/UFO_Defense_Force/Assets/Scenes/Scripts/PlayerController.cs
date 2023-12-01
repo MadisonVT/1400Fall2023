@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     public Transform blaster;
 
     public GameObject lazerBeam;
+
+    public string inventory;
     
     // Start is called before the first frame update
     void Start()
@@ -50,8 +52,9 @@ public class PlayerController : MonoBehaviour
     //Deletes any object that has a trigger that hits the player.
     private void OnTriggerEnter(Collider other)
     {
+        string inventory = "Gold Ball";
+        Debug.Log("You got " + inventory + "!");
         Destroy(other.gameObject);
     }
-    // testing
-    
+
 }
