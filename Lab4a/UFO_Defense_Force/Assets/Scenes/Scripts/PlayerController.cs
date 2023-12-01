@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour
 
     public GameObject lazerBeam;
     
+    public GameObject pickUp;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -46,10 +48,14 @@ public class PlayerController : MonoBehaviour
             //Creates a lazerBeam at the blaster position while maintaining it's rotation.
             Instantiate(lazerBeam, blaster.transform.position, lazerBeam.transform.rotation);
         }
+        
     }
     //Deletes any object that has a trigger that hits the player.
     private void OnTriggerEnter(Collider other)
     {
         Destroy(other.gameObject);
+        
     }
+    
+    
 }
