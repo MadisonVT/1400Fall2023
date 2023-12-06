@@ -475,8 +475,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6b57d30dd56e044a871f7cddc57587b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickUp: {fileID: 1585961220652949605, guid: 479b49dd4fb4fd04c9b1a5e334115dfb, type: 3}
-  itemSpawn: {fileID: 1293029728}
+  itemPrefabs:
+  - {fileID: 1585961220652949605, guid: 479b49dd4fb4fd04c9b1a5e334115dfb, type: 3}
+  itemIndex: 0
 --- !u!4 &1293029728
 Transform:
   m_ObjectHideFlags: 0

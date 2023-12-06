@@ -20,12 +20,7 @@ public class SpawnEnemy : MonoBehaviour
     {
         InvokeRepeating("SpawnRandomUFO", startDelay, spawnInterval);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 
     void SpawnRandomUFO()
     {

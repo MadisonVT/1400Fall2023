@@ -22,10 +22,17 @@ public class DestroyOutOfBounds : MonoBehaviour
         }
         else if (transform.position.z < lowerBounds)
         {
-            Debug.Log("Game Over");
-            Destroy(gameObject);
-            Time.timeScale = 0;
-
+            if (gameObject.CompareTag("Enemy"))
+            {
+                Debug.Log("Game Over");
+                Destroy(gameObject);
+                Time.timeScale = 0; 
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+            
         }
     }
 }

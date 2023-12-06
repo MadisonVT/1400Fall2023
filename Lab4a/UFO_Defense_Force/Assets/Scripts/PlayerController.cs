@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     public Transform blaster;
 
     public GameObject lazerBeam;
+    public GameObject pickUp;
 
     public string inventory;
     
@@ -52,9 +53,19 @@ public class PlayerController : MonoBehaviour
     //Deletes any object that has a trigger that hits the player.
     private void OnTriggerEnter(Collider other)
     {
-        string inventory = "Gold Ball";
-        Debug.Log("You got " + inventory + "!");
-        Destroy(other.gameObject);
+        if (other.gameObject.CompareTag("Item"))
+        {
+            string inventory = "Gold Ball";
+            Debug.Log("You got " + inventory + "!");
+            Destroy(other.gameObject);
+        }
+        else
+        {
+            Debug.Log("You died.");
+            Destroy(other.gameObject);
+            Time.timeScale = 0;
+        }
+       
     }
 
 }

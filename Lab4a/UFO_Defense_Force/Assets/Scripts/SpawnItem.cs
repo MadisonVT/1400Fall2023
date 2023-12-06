@@ -4,14 +4,25 @@ using UnityEngine;
 
 public class SpawnItem : MonoBehaviour
 {
-    public GameObject pickUp;
+    
+    public GameObject[] itemPrefabs;
 
-    public Transform itemSpawn;
+    public int itemIndex;
 
-    // Start is called before the first frame update
-    void Start()
+    private float itemSpawnRangeX = 20f;
+    private float itemSpawnPosZ = 20f;
+    private float itemStartDelay = 2.0f;
+    private float itemSpawnInterval = 4.5f;
+
+    private void Start()
     {
-        //Creates a lazerBeam at the blaster position while maintaining it's rotation.
-        Instantiate(pickUp, itemSpawn.transform.position, pickUp.transform.rotation);
+        InvokeRepeating("SpawnRandomItem", itemStartDelay, itemSpawnInterval);
+    }
+
+    void SpawnRandomItem()
+    {
+        Vector3 itemSpawnPos = new Vector3(Random.Range(-itemSpawnRangeX, itemSpawnRangeX), 0, itemSpawnPosZ);
+        int ufoIndex = Random.Range(0, itemPrefabs.Length);
+        Instantiate(itemPrefabs[itemIndex],itemSpawnPos, itemPrefabs[itemIndex].transform.rotation);
     }
 }
