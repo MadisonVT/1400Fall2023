@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7407070357050544648}
   - component: {fileID: 8616638388199003026}
   - component: {fileID: 3563758790248711432}
+  - component: {fileID: 5584258563181145768}
   m_Layer: 0
   m_Name: UFO_Soldier
   m_TagString: Untagged
@@ -119,3 +120,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 7
+--- !u!114 &5584258563181145768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 568243454973127888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55961aeabe76b784bbf638e471add251, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  topBounds: 30
+  lowerBounds: -15
