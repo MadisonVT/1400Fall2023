@@ -16,7 +16,7 @@ public class DestroyOutOfBounds : MonoBehaviour
         
     }
 
-    void Update(out bool isGameOver)
+    void Update()
     {
         if (transform.position.z > topBounds)
         {

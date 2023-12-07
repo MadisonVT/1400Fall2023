@@ -21,17 +21,11 @@ public class CollisionDetect : MonoBehaviour
             Destroy(gameObject); //Destroy this game object. 
             scoreManager.IncreaseScore(scoreToGive); 
         }
-        if (gameObject.CompareTag("Enemy"))
-        {
-            Destroy(gameObject); //Destroy this game object. 
-            Destroy(other.gameObject); //Destroy the other object it hits.
-            scoreManager.IncreaseScore(scoreToGive); 
-            //Calls the ScoreManager script and the IncreaseScore method within, and gives it scoreToGive.
-        }
         else
         {
             Destroy(gameObject); //Destroy this game object.
             Destroy(other.gameObject); //Destroy the other object it hits.
+            scoreManager.IncreaseScore(scoreToGive); 
         }
     }
 }
