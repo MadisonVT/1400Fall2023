@@ -19,8 +19,9 @@ public class CollisionDetect : MonoBehaviour
         if (gameObject.CompareTag("Item"))
         {
             Destroy(gameObject); //Destroy this game object. 
+            scoreManager.IncreaseScore(scoreToGive); 
         }
-        if (gameObject.CompareTag("Lazer"))
+        if (gameObject.CompareTag("Enemy"))
         {
             Destroy(gameObject); //Destroy this game object. 
             Destroy(other.gameObject); //Destroy the other object it hits.

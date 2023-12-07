@@ -12,6 +12,7 @@ public class ScoreManager : MonoBehaviour
     // Increases score by a set amount in the score variable.
     public void IncreaseScore(int amount)
     {
+        Debug.Log("Score Increasing");
         score += amount;
         UpdateScoreText();
     }
@@ -25,6 +26,7 @@ public class ScoreManager : MonoBehaviour
     // Updates the text shown to the player.
     public void UpdateScoreText()
     {
+        Debug.Log("Score Text Updating");
         scoreText.text = "Score: " + score;
     }
 }
