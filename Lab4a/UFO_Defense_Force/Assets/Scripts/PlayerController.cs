@@ -14,14 +14,15 @@ public class PlayerController : MonoBehaviour
     public Transform blaster;
 
     public GameObject lazerBeam;
-    public GameObject pickUp;
+
+    public GameManager gameManager;
 
     public string inventory;
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -43,29 +44,13 @@ public class PlayerController : MonoBehaviour
         {
             transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
         }
-        //If spacebar is pressed, fire lazerbeam.
-        if (Input.GetKeyDown(KeyCode.Space))
+        //If spacebar is pressed and the game isn't over, fire lazerbeam.
+        if (Input.GetKeyDown(KeyCode.Space) && gameManager.isGameOver == false) 
         {
             //Creates a lazerBeam at the blaster position while maintaining it's rotation.
             Instantiate(lazerBeam, blaster.transform.position, lazerBeam.transform.rotation);
         }
-    }
-    //Deletes any object that has a trigger that hits the player.
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Item"))
-        {
-            string inventory = "Gold Ball";
-            Debug.Log("You got " + inventory + "!");
-            Destroy(other.gameObject);
-        }
-        else
-        {
-            Debug.Log("You died.");
-            Destroy(other.gameObject);
-            Time.timeScale = 0;
-        }
        
-    }
+        }
 
 }

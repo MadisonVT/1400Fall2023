@@ -2,7 +2,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro; //Namespace for Text Mesh Pro.
+
 using Object = System.Object;
+
 
 public class GameManager : MonoBehaviour
 {
@@ -19,7 +22,6 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         gameOverText = GameObject.Find("GameOverText");
-        Debug.Log("Game Started");
     }
 
     // Update is called once per frame
