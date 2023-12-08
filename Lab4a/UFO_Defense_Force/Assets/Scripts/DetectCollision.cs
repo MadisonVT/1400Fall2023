@@ -10,6 +10,7 @@ public class CollisionDetect : MonoBehaviour
     public int scoreToGive;
     private AudioClip explosionSound;
     private AudioSource audioSource;
+        
 
     private void Start()
     {
@@ -28,11 +29,20 @@ public class CollisionDetect : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject); //Destroy this game object.
-            Destroy(other.gameObject); //Destroy the other object it hits.
-            audioSource.clip = explosionSound;
-            audioSource.Play();
-            scoreManager.IncreaseScore(scoreToGive); 
+            if (audioSource == null)
+            {
+                audioSource = gameObject.AddComponent<AudioSource>();
+                audioSource.clip = explosionSound;
+                audioSource.Play();
+            }
+            
+            if(!audioSource.isPlaying)
+            {
+                Destroy(gameObject); //Destroy this game object.
+                Destroy(other.gameObject); //Destroy the other object it hits.
+                scoreManager.IncreaseScore(scoreToGive); 
+            }
+            
         }
     }
 }
