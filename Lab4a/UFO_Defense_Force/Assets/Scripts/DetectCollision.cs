@@ -8,8 +8,7 @@ public class CollisionDetect : MonoBehaviour
     public ScoreManager scoreManager; //stores reference to ScoreManager
     public GameManager gameManager; //stores reference to ScoreManager
     public int scoreToGive;
-    private AudioClip explosionSound;
-    private AudioSource audioSource;
+    [SerializeField] private AudioSource audioSource;
         
 
     private void Start()
@@ -17,7 +16,6 @@ public class CollisionDetect : MonoBehaviour
         scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>(); 
         //Finds the ScoreManager Game Object and references it's ScoreManager script component
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        audioSource = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -26,23 +24,15 @@ public class CollisionDetect : MonoBehaviour
         {
             Destroy(gameObject); //Destroy this game object. 
             scoreManager.IncreaseScore(scoreToGive); 
+            audioSource.Play();
         }
         else
         {
-            if (audioSource == null)
-            {
-                audioSource = gameObject.AddComponent<AudioSource>();
-                audioSource.clip = explosionSound;
                 audioSource.Play();
-            }
-            
-            if(!audioSource.isPlaying)
-            {
                 Destroy(gameObject); //Destroy this game object.
                 Destroy(other.gameObject); //Destroy the other object it hits.
                 scoreManager.IncreaseScore(scoreToGive); 
-            }
-            
+                
         }
     }
 }
