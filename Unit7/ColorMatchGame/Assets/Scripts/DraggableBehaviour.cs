@@ -17,14 +17,14 @@ public class DraggableBehaviour : MonoBehaviour
 
     public IEnumerator OnMouseDown()
     {
-        offset = transform.position - cameraObj.ScreenToWorldPoint(Input.mousePosition);
+        offset = transform.position -cameraObj.ScreenToWorldPoint(Input.mousePosition);
         draggable = true;
         yield return new WaitForFixedUpdate();
         
         while (draggable)
         {
             yield return new WaitForFixedUpdate();
-            position = cameraObj.ScreenToViewportPoint(Input.mousePosition) + offset;
+            position = cameraObj.ScreenToWorldPoint(Input.mousePosition) + offset;
             transform.position = position;
         }
     }
