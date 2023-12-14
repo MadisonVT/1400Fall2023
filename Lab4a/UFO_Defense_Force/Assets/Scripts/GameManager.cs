@@ -2,7 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro; //Namespace for Text Mesh Pro.
+using TMPro;
+using Unity.VisualScripting; //Namespace for Text Mesh Pro.
 
 using Object = System.Object;
 
@@ -11,6 +12,7 @@ public class GameManager : MonoBehaviour
 {
     public bool isGameOver;
     private GameObject gameOverText;
+
     
     // Start is called before the first frame update
     void Awake()
@@ -22,6 +24,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         gameOverText = GameObject.Find("GameOverText");
+
     }
 
     // Update is called once per frame
@@ -38,6 +41,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    // ReSharper disable Unity.PerformanceAnalysis
     public void EndGame()
     {
         Debug.Log("Game is Over");
