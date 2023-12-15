@@ -1,29 +1,55 @@
+using System;
 using System.Collections;
-using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class CoroutineBehaviour : MonoBehaviour
 {
-    public bool canRun = true;
-
+    public UnityEvent startEvent, startCountEvent, repeatCountEvent, endCountEvent, repeatUntilFalseEvent;
+    public bool canRun;
     public float seconds = 3.0f;
-
+    public IntData counterNum;
     private WaitForSeconds wfsObj;
-
     private WaitForFixedUpdate wffuObj;
     // Start is called before the first frame update
-    IEnumerator Start()
+    public void Start()
+    {
+        startEvent.Invoke();
+    }
+
+    public void StartCounting()
+    {
+        StartCoroutine(Counting());
+    }
+    IEnumerator Counting()
     {
         wfsObj = new WaitForSeconds(seconds);
         wffuObj = new WaitForFixedUpdate();
-        Debug.Log("Start");
-        yield return wfsObj;
-        Debug.Log("Start Delay");
 
+        startCountEvent.Invoke();
+        yield return wfsObj;
+        while (counterNum.value > 0)
+        {
+            repeatCountEvent.Invoke();
+            counterNum.value--;
+            yield return wfsObj;
+        }
+        //yield return wfsObj;
+        endCountEvent.Invoke();
+    }
+
+    public void StartRepeatUntilFalse()
+    {
+        canRun = true;
+        StartCoroutine(RepeatUntilFalse());
+    }
+    private IEnumerator RepeatUntilFalse()
+    {
         while (canRun)
         {
-            yield return wffuObj;
-            Debug.Log("Run on Start");
+            yield return wfsObj;
+            repeatUntilFalseEvent.Invoke();
         }
     }
 }
