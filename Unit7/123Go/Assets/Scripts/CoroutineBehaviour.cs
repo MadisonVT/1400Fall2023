@@ -15,6 +15,8 @@ public class CoroutineBehaviour : MonoBehaviour
     // Start is called before the first frame update
     public void Start()
     {
+        wfsObj = new WaitForSeconds(seconds);
+        wffuObj = new WaitForFixedUpdate();
         startEvent.Invoke();
     }
 
@@ -24,9 +26,6 @@ public class CoroutineBehaviour : MonoBehaviour
     }
     IEnumerator Counting()
     {
-        wfsObj = new WaitForSeconds(seconds);
-        wffuObj = new WaitForFixedUpdate();
-
         startCountEvent.Invoke();
         yield return wfsObj;
         while (counterNum.value > 0)
